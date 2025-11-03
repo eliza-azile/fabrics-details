@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Вход и регистрация</title>
+</head>
+
+<body>
+    <header class="header">
+        <button class="button__login">Войти</button>
+    </header>
+    <main>
+        <!-- Модалка ВХОДА -->
+        <section class="modal section__login">
+            <button class="close__btn" type="button" aria-label="Закрыть окно"></button>
+            <h1 class="title__log">Вход</h1>
+            <form class="form__login">
+                <fieldset class="fieldset__login">
+                    <div class="input__group">
+                        <label for="text__to__log__in__to_current_account" class="visually-hidden">Логин></label>
+                        <input class="input" type="text" id="text__to__log__in__to_current_account"
+                            name="current_login__to__log_in" placeholder="Email или телефон" autocomplete="username"
+                            required>
+                    </div>
+                    <div class="input__group">
+                        <label for="password__for__log_in" class="visually-hidden">Пароль</label>
+                        <input class="input" type="password" id="password__for__log_in" name="password__for__log_in"
+                            placeholder="Пароль" autocomplete="current-password" required>
+                    </div>
+                    <a href="#" class="forgot_password">Забыли пароль?</a>
+                </fieldset>
+                <button class="button__login_in_fieldset" type="submit">Войти</button>
+            </form>
+            <p class="log_in_using">Зарегистрироваться или войти с помощью</p>
+            <div class="log_or_authorization__options">
+                <button type="button" class="alternative__login registration__btn"
+                    aria-label="Зарегистрироваться на сайте"></button>
+                <button type="button" class="alternative__login"></button>
+                <button type="button" class="alternative__login"></button>
+            </div>
+        </section>
+
+        <!-- Модалка РЕГИСТРАЦИИ -->
+        <section class="modal section__authorization">
+            <div class="container__navigation">
+                <button class="return__btn" type="button" aria-label="Вернуться ко входу в аккаунт"></button>
+                <button class="close__btn" type="button" aria-label="Закрыть окно"></button>
+            </div>
+            <h1 class="title__authorization">Регистрация</h1>
+            <form class="form__register">
+                <fieldset class="fieldset__authorization">
+                    <div class="input__group">
+                        <label for="new_login_name" class="visually-hidden">Логин</label>
+                        <input class="input" type="text" id="new_login_name" name="new_login_name" placeholder="Логин"
+                            required>
+                    </div>
+                    <div class="input__group">
+                        <label for="text__to_log__in__to_new_account" class="visually-hidden">Email или телефон</label>
+                        <input class="input" type="text" id="text__to_log__in__to_new_account" name="login__name"
+                            placeholder="Email или телефон" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="password__to_authorization" class="visually-hidden">Пароль</label>
+                        <input class="input" type="password" id="password__to_authorization"
+                            name="password__to_authorization" placeholder="Пароль" autocomplete="new-password" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="repeate_password__to_authorization" class="visually-hidden">Подтверждение
+                            пароля</label>
+                        <input class="input" type="password" id="repeate_password__to_authorization"
+                            name="repeate_password__to_authorization" placeholder="Подтверждение пароля"
+                            autocomplete="new-password" required>
+                    </div>
+                    <div class="checkbox__group">
+                        <label class="checkbox__label">
+                            <input type="checkbox" required>
+                            я выражаю согласие с условиями использования и политикой конфиденциальности
+                        </label>
+                    </div>
+                </fieldset>
+                <button class="button__authorization__fieldset" type="submit">Зарегистрироваться</button>
+            </form>
+        </section>
+    </main>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
