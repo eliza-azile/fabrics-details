@@ -1,0 +1,25 @@
+:root {
+    --primary-color: #B73131;
+    --text-color: #101010;
+    --bg-color: #FFFFFF;
+
+    --font-family: 'Hind Vadodara', sans-serif;
+    --font-size-base: 22px;
+    --font-size-title: 36px;
+
+    /*Между чекбоксом и текстом*/
+    --spacing-xs: 5px;
+    /**Внутренний левый отступ инпутов*/
+    --spacing-sm: 20px;
+    /*Между инпутами в форме*/
+    --spacing-md: 25px;
+    /*Между "Забыл пароль" и кнопкой*/
+    --spacing-lg: 40px;
+
+    /*Чекбокс*/
+    --border-radius-sm: 3px;
+    /*Инпуты*/
+    --border-radius: 10px;
+    /*Кнопки*/
+    --border-radius-lg: 52px;
+}

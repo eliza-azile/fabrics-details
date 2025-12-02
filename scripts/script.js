@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loginButton = document.querySelector('.button__login');
+    const loginButton = document.querySelector('.menu__btn-login');
     const loginModal = document.querySelector('.section__login');
     const registerModal = document.querySelector('.section__authorization');
     const closeButtons = document.querySelectorAll('.close__btn');

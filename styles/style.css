@@ -1,40 +1,169 @@
-:root {
-    --primary-color: #B73131;
-    --text-color: #862B2B;
-    --bg-color: #FFFFFF;
-
-    --font-family: 'Hind Vadodara', sans-serif;
-    --font-size-base: 22px;
-    --font-size-title: 40px;
-
-    /*Между чекбоксом и текстом*/
-    --spacing-xs: 5px;
-    /**Внутренний левый отступ инпутов*/
-    --spacing-sm: 20px;
-    /*Между инпутами в форме*/
-    --spacing-md: 25px;
-    /*Между "Забыл пароль" и кнопкой*/
-    --spacing-lg: 40px;
-
-    /*Чекбокс*/
-    --border-radius-sm: 3px;
-    /*Инпуты*/
-    --border-radius: 10px;
-    /*Кнопки*/
-    --border-radius-lg: 52px;
-}
-
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--text-color);
     background-color: #FFF2F2;
+    inline-size: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .header {
     position: relative;
-    height: 177px;
-    background-color: var(--text-color);
+    height: 127px;
+    background-color: #671111;
+    display: flex;
+}
+
+.logo {
+    block-size: 58px;
+    inline-size: 150px;
+    margin-inline-start: 80px;
+    align-self: center;
+}
+
+.search__products-container {
+    margin-inline-start: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.product__search {
+    block-size: 62px;
+    inline-size: 656px;
+    border: 3px solid #671111;
+    border-radius: 33px;
+    color: #A2A2A2;
+    font-size: 22px;
+    padding-inline-start: 20px;
+}
+
+.btn__catalog {
+    background-image: url('/images/catalog.svg');
+    block-size: 62px;
+    inline-size: 62px;
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 125px;
+    margin-block-start: -5px;
+    align-items: center;
+}
+
+.menu__btn {
+    block-size: 60px;
+    inline-size: 65px;
+    background-color: transparent;
+    border: none;
+}
+
+.menu__btn-img {
+    block-size: 44px;
+    inline-size: 44px;
+}
+
+.cart {
+    fill: #fff;
+}
+
+.menu__btn-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.carousel__track {
+    block-size: 180px;
+    margin-block-start: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.products__showcase {
+    margin-block-start: 165px;
+    margin-inline-start: 40px;
+    background-color: #fff;
+    padding-block-start: 20px;
+    padding-inline-start: 20px;
+    border-radius: 16px;
+}
+
+.products-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-start: 30px;
+    inline-size: 1400px;
+    border-radius: 32px;
+}
+
+.product-card {
+    background-color: #FD8B8B;
+    block-size: 270px;
+    inline-size: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    border-radius: 14px;
+    color: #313131;
+}
+
+.product-card__info {
+    margin-inline-start: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: start;
+}
+
+.product-card__image {
+    margin-block-start: 8px;
+    block-size: 190px;
+    inline-size: 180px;
+    background-color: #FA5E5E;
+    border-radius: 14px;
+    align-self: center;
+}
+
+.product-card__current-price {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.product-card__title {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.product-card__rating {
+    display: none;
+}
+
+.rating__value {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.product-card__cart-btn {
+    display: none;
+    block-size: 20px;
+    inline-size: 100px;
+    background-color: #FB5959;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    align-self: center;
+    margin-block-start: -7px;
 }
 
 .button__login {
@@ -72,18 +201,18 @@ body {
     border-radius: 87px;
     z-index: 1000;
     max-width: 588px;
-    height: 774px;
+    height: 674px;
     padding: 30px 47px 94px;
 }
 
 .section__login {
-    display: none;
+    height: 574px;
+    margin-inline-start: 30px;
 }
 
 .section__authorization {
-    display: none;
-    margin-top: 92px;
-    height: 896px;
+    margin-top: 12px;
+    height: 706px;
 }
 
 .close__btn,
@@ -109,7 +238,8 @@ body {
 }
 
 .return__btn {
-    left: 50px;
+    top: 30px;
+    left: 60px;
     width: 34px;
     background-image: url('/images/назад\ стрелка.svg');
     background-repeat: no-repeat;
@@ -119,7 +249,7 @@ body {
 
 .title__log,
 .title__authorization {
-    margin-top: 11px;
+    margin-top: 6px;
     text-align: center;
     margin-bottom: var(--spacing-lg);
     font-size: var(--font-size-title);
@@ -127,16 +257,22 @@ body {
     color: black;
 }
 
+
 .form__login,
 .form__register {
-    margin-top: 85px;
+    margin-top: 55px;
 }
 
 .fieldset__login,
 .fieldset__authorization {
     display: block;
-    margin-left: 47px;
+    margin-left: 30px;
     border: none;
+}
+
+.fieldset__authorization {
+    margin-top: -20px;
+    margin-left: 50px;
 }
 
 
@@ -164,16 +300,18 @@ body {
 
 .button__login_in_fieldset,
 .button__authorization__fieldset {
-    width: 494px;
-    height: 108px;
-    padding: 27px 42px 61px;
+    width: 420px;
+    height: 58px;
+    padding: 17px 22px 61px;
     background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 52px;
     font-size: var(--font-size-title);
     cursor: pointer;
-    margin-top: var(--spacing-lg);
+    text-align: center;
+    margin-top: 10px;
+    margin-inline-start: 25px;
 }
 
 /*НЕТ В МАКЕТЕ!!*/
@@ -195,9 +333,20 @@ body {
 }
 
 .forgot_password {
-    color: var(--text-color);
+    color: #A42D2D;
     text-decoration: none;
-    font-size: var(--font-size-base);
+    font-size: 17px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.registration__btn {
+    font-size: 17px;
+    color: #A42D2D;
+    text-align: center;
+    margin-inline-start: 30px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .log_in_using {
@@ -230,4 +379,222 @@ body {
     border: 5px solid #A42D2D;
     border-radius: 50%;
     background-color: transparent;
+}
+
+.footer {
+    margin-block-start: 100px;
+    block-size: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding-block-end: 43px;
+    background-color: #E6CDCD;
+}
+
+.logo__footer {
+    block-size: 60px;
+    inline-size: 150px;
+    margin-inline-start: 40px;
+    align-self: end;
+}
+
+.footer__contacts {
+    margin-inline-start: 83px;
+}
+
+
+.marketplace__container {
+    margin-inline-start: 130px;
+}
+
+.earn__container {
+    margin-inline: 60px;
+}
+
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-self: self-start;
+    margin-block-start: 30px;
+    gap: 5px;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #5E5E5E;
+}
+
+/* ======================== ПРАВИЛЬНАЯ CSS-КАРУСЕЛЬ ======================== */
+.carousel__slide {
+    block-size: 350px;
+    inline-size: 735px;
+    border-radius: 16px;
+    margin-top: -50px;
+    overflow: hidden;
+    position: absolute;
+    will-change: transform, opacity;
+}
+
+/* Начальные позиции */
+.carousel__slide:nth-child(1) {
+    animation: slide1Animation 12s infinite ease-in-out;
+    opacity: 0.8;
+    transform: translateX(-760px) scale(0.9);
+    z-index: 1;
+}
+
+.carousel__slide:nth-child(2) {
+    animation: slide2Animation 12s infinite ease-in-out;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 2;
+}
+
+.carousel__slide:nth-child(3) {
+    animation: slide3Animation 12s infinite ease-in-out;
+    opacity: 0.8;
+    transform: translateX(760px) scale(0.9);
+    z-index: 1;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Анимация для первого слайда (левый → центр → правый → левый) */
+@keyframes slide1Animation {
+
+    0%,
+    25% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+
+    41%,
+    58% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+
+    66% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
+
+    74%,
+    91% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+}
+
+/* Анимация для второго слайда (центр → правый → левый → центр) */
+@keyframes slide2Animation {
+
+    0%,
+    25% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+
+    33% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
+
+    41%,
+    58% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
+
+    66% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+
+    74%,
+    91% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+}
+
+/* Анимация для третьего слайда (правый → левый → центр → правый) */
+@keyframes slide3Animation {
+
+    0%,
+    25% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
+
+    33% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+
+    41%,
+    58% {
+        opacity: 0.8;
+        transform: translateX(-760px) scale(0.9);
+        z-index: 1;
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+
+    74%,
+    91% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateX(760px) scale(0.9);
+        z-index: 1;
+    }
 }
