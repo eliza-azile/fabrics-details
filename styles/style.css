@@ -60,6 +60,7 @@ body {
     inline-size: 65px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .menu__btn-img {
@@ -258,8 +259,7 @@ body {
 }
 
 
-.form__login,
-.form__register {
+.form {
     margin-top: 55px;
 }
 
@@ -276,8 +276,8 @@ body {
 }
 
 
-.form__login .input__group,
-.form__register .input__group {
+.form.input__group,
+.form .input__group {
     margin-bottom: var(--spacing-md);
 }
 

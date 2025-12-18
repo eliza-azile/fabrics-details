@@ -372,22 +372,21 @@
         <section class="modal section__login">
             <button class="close__btn" type="button" aria-label="Закрыть окно"></button>
             <h1 class="title__log">Вход</h1>
-            <form class="form__login">
+            <form id="login-form" class="form">
                 <fieldset class="fieldset__login">
                     <div class="input__group">
                         <label for="text__to__log__in__to_current_account" class="visually-hidden">Логин></label>
-                        <input class="input" type="text" id="text__to__log__in__to_current_account"
-                            name="current_login__to__log_in" placeholder="Email или телефон" autocomplete="username"
-                            required>
+                        <input class="input" type="email" id="text__to__log__in__to_current_account"
+                            name="current_login__to__log_in" placeholder="Email" autocomplete="username" required>
                     </div>
                     <div class="input__group">
-                        <label for="password__for__log_in" class="visually-hidden">Пароль</label>
-                        <input class="input" type="password" id="password__for__log_in" name="password__for__log_in"
+                        <label for="login-password" class="visually-hidden">Пароль</label>
+                        <input class="input" type="password" id="login-password" name="password__for__log_in"
                             placeholder="Пароль" autocomplete="current-password" required>
                     </div>
                     <a href="#" class="forgot_password">Забыли пароль?</a>
                 </fieldset>
-                <button class="button__login_in_fieldset" type="submit">Войти</button>
+                <button class="button__login_in_fieldset" type="button" onclick="handleLogin()">Войти</button>
             </form>
             <p class="registration__btn">У вас нет аккаунта? Зарегистрируйтесь!</p>
         </section>
@@ -399,27 +398,27 @@
                 <button class="close__btn" type="button" aria-label="Закрыть окно"></button>
             </div>
             <h1 class="title__authorization">Регистрация</h1>
-            <form class="form__register">
+            <form id="register-form" class="form">
                 <fieldset class="fieldset__authorization">
                     <div class="input__group">
-                        <label for="new_login_name" class="visually-hidden">Логин</label>
-                        <input class="input" type="text" id="new_login_name" name="new_login_name" placeholder="Логин"
+                        <label for="register-username" class="visually-hidden">Логин</label>
+                        <input class="input" type="text" id="register-username" name="new_login_name"
+                            placeholder="Логин" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="register-email" class="visually-hidden">Email</label>
+                        <input class="input" type="email" id="register-email" name="login__name" placeholder="Email"
                             required>
                     </div>
                     <div class="input__group">
-                        <label for="text__to_log__in__to_new_account" class="visually-hidden">Email или телефон</label>
-                        <input class="input" type="text" id="text__to_log__in__to_new_account" name="login__name"
-                            placeholder="Email или телефон" required>
+                        <label for="register-password" class="visually-hidden">Пароль</label>
+                        <input class="input" type="password" id="register-password" name="password__to_authorization"
+                            placeholder="Пароль" autocomplete="new-password" required>
                     </div>
                     <div class="input__group">
-                        <label for="password__to_authorization" class="visually-hidden">Пароль</label>
-                        <input class="input" type="password" id="password__to_authorization"
-                            name="password__to_authorization" placeholder="Пароль" autocomplete="new-password" required>
-                    </div>
-                    <div class="input__group">
-                        <label for="repeate_password__to_authorization" class="visually-hidden">Подтверждение
+                        <label for="register-password2" class="visually-hidden">Подтверждение
                             пароля</label>
-                        <input class="input" type="password" id="repeate_password__to_authorization"
+                        <input class="input" type="password" id="register-password2"
                             name="repeate_password__to_authorization" placeholder="Подтверждение пароля"
                             autocomplete="new-password" required>
                     </div>
@@ -484,7 +483,7 @@
                 </nav>
         </div>
     </footer>
-
+    <script src="api-service.js"></script>
     <script src="/scripts/script.js"></script>
 </body>
 
