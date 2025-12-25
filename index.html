@@ -15,7 +15,6 @@
     <header class="header">
         <img class="logo" src="/images/F&D.svg" alt="Fabrics & Details - логотип">
         <div class="search__products-container">
-            <button class="btn__catalog" aria-label="Открыть каталог товаров"></button>
             <input type="text" class="product__search" name="product__search" placeholder="Найти на F&D"
                 aria-label="Поиск товаров">
         </div>
@@ -29,7 +28,7 @@
                 <img class="menu__btn-img" alt="Войти в аккаунт" src="/images/icon-enter.svg">
                 <span class="menu__btn-text">Войти</span>
             </button>
-            <button class="menu__btn">
+            <button class="menu__btn menu__btn-cart" onclick="window.location.href='/cart.html'">
                 <svg class="menu__btn-img cart" alt="Корзина товаров" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512">
                     <path
@@ -41,6 +40,7 @@
         </div>
     </header>
     <main class="main">
+        <div class="design_block"></div>
         <!-- Карусель рекламных баннеров -->
         <section class="promo-carousel" aria-label="Рекламные предложения">
             <div class="carousel__track">
@@ -60,311 +60,8 @@
 
         <!-- Витрина -->
         <section class="products__showcase" aria-labelledby="featured-products">
-            <h2 id="featured-products" class="showcase__title">Популярные товары</h2>
             <div class="products-grid">
-                <!-- Карточка товара 1 -->
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-
-                <!-- Остальные карточки -->
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
-                <article class="product-card">
-                    <div class="product-card__image"></div>
-
-                    <div class="product-card__info">
-                        <div class="product-card__price">
-                            <span class="product-card__current-price">1500 ₽</span>
-                        </div>
-
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Сайт</h3>
-
-                            <div class="product-card__meta">
-                                <span class="product-card__category"></span>
-                                <span class="product-card__stock"></span>
-                            </div>
-                        </div>
-
-                        <div class="product-card__rating" aria-label="Рейтинг: 5 из 5 звезд">
-                            <img class="rating__star" alt="Звезда рейтинга" src="/images/star_filled.svg">
-                            <span class="rating__value">5,0</span>
-                        </div>
-                    </div>
-
-                    <button class="product-card__cart-btn">Добавить в корзину</button>
-                </article>
+                <!-- Карточки будут сгенерированы автоматически через JS -->
             </div>
         </section>
 
@@ -450,41 +147,25 @@
             </div>
         </div>
 
-        <div class="footer__container marketplace__container">
-            <h3 class="footer__marketplace-title">F&D маркетплейс</h1>
-                <nav class="footer__nav">
-                    <a href="#" class="footer__link">О F&D</a>
-                    <a href="#" class="footer__link">Вакансии</a>
-                    <a href="#" class="footer__link">Стать курьером</a>
-                    <a href="#" class="footer__link">Реквизиты</a>
-                    <a href="#" class="footer__link">Кошелёк</a>
-        </div>
-
-
-        <div class="footer__container earn__container">
-            <h3 class="footer__earn-title">Зарабатывать с F&D</h1>
-                <nav class="footer__nav">
-                    <a href="#" class="footer__link">Стать продавцом</a>
-                    <a href="#" class="footer__link">Что продавать на F&D</a>
-                    <a href="#" class="footer__link">Стать партнёром</a>
-                </nav>
-        </div>
-
-
         <div class="footer__container help__container">
             <h3 class="footer__help-title">Помощь</h1>
                 <nav class="footer__nav">
-                    <a href="#" class="footer__link">Как сделать заказ</a>
-                    <a href="#" class="footer__link">Оплата</a>
-                    <a href="#" class="footer__link">Возврат товара</a>
                     <a href="#" class="footer__link">Контакты</a>
+                    <a href="#" class="footer__link">Оплата</a>
+                    <a href="#" class="footer__link">Партнёрство</a>
                     <a href="#" class="footer__link">Безопасность</a>
                     <a href="#" class="footer__link">Условия обработки данных</a>
                 </nav>
         </div>
     </footer>
-    <script src="api-service.js"></script>
+    <script src="/scripts/cart-manager.js"></script>
+    <script src="/scripts/cart-icon.js"></script>
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/products-data.js"></script>
+    <script src="/scripts/products.js"></script>
+    <script src="api-service.js"></script>
+    <script src="/scripts/cart.js"></script>
+    <script src="/scripts/cart-manager.js"></script>
 </body>
 
 </html>

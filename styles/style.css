@@ -13,13 +13,21 @@ body {
     height: 127px;
     background-color: #671111;
     display: flex;
+    align-items: center;
 }
+
+.logo-link {
+    display: block;
+    margin-inline-start: 50px;
+    text-decoration: none;
+    line-height: 0;
+}
+
 
 .logo {
     block-size: 58px;
     inline-size: 150px;
-    margin-inline-start: 80px;
-    align-self: center;
+    margin-inline-start: 50px;
 }
 
 .search__products-container {
@@ -38,19 +46,10 @@ body {
     padding-inline-start: 20px;
 }
 
-.btn__catalog {
-    background-image: url('/images/catalog.svg');
-    block-size: 62px;
-    inline-size: 62px;
-    background-color: transparent;
-    border: none;
-    background-size: cover;
-}
-
 .menu {
     display: flex;
     flex-direction: row;
-    margin-inline-start: 125px;
+    margin-inline-start: 185px;
     margin-block-start: -5px;
     align-items: center;
 }
@@ -72,10 +71,59 @@ body {
     fill: #fff;
 }
 
+/* Активная кнопка корзины (когда находимся на странице корзины) */
+.menu__btn-cart.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    block-size: 70px;
+    border-radius: 8px;
+}
+
+/* Стиль для всех кнопок корзины как ссылок */
+.menu__btn-cart {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu__btn-cart:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Счётчик товаров в корзине */
+.cart-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Позиционируем кнопку корзины относительно для счётчика */
+.menu__btn-cart {
+    position: relative;
+}
+
 .menu__btn-text {
     font-size: 12px;
     font-weight: 700;
     color: #fff;
+}
+
+.design_block {
+    margin-block-start: 15px;
+    block-size: 40px;
+    inline-size: 1100px;
+    background-color: #FFA9A9;
+    justify-self: center;
+    border-radius: 12px;
 }
 
 .carousel__track {
@@ -87,9 +135,8 @@ body {
 }
 
 .products__showcase {
-    margin-block-start: 165px;
+    margin-block-start: 85px;
     margin-inline-start: 40px;
-    background-color: #fff;
     padding-block-start: 20px;
     padding-inline-start: 20px;
     border-radius: 16px;
@@ -102,14 +149,14 @@ body {
     flex-direction: row;
     justify-content: center;
     margin-block-start: 30px;
-    inline-size: 1400px;
+    margin-inline-start: 90px;
+    inline-size: 1200px;
     border-radius: 32px;
 }
 
 .product-card {
-    background-color: #FD8B8B;
-    block-size: 270px;
-    inline-size: 210px;
+    block-size: 354px;
+    inline-size: 170px;
     display: flex;
     flex-direction: column;
     gap: 17px;
@@ -121,22 +168,21 @@ body {
     margin-inline-start: 10px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
     align-items: start;
 }
 
 .product-card__image {
     margin-block-start: 8px;
-    block-size: 190px;
-    inline-size: 180px;
-    background-color: #FA5E5E;
+    block-size: 236px;
+    inline-size: 160px;
+    background-color: #FFA9A9;
     border-radius: 14px;
     align-self: center;
 }
 
 .product-card__current-price {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .product-card__title {
@@ -144,8 +190,8 @@ body {
     font-size: 20px;
 }
 
-.product-card__rating {
-    display: none;
+.valute {
+    font-weight: 400;
 }
 
 .rating__value {
@@ -154,11 +200,10 @@ body {
 }
 
 .product-card__cart-btn {
-    display: none;
-    block-size: 20px;
-    inline-size: 100px;
-    background-color: #FB5959;
-    font-size: 16px;
+    block-size: 33px;
+    inline-size: 165px;
+    background-color: #FF8383;
+    font-size: 13px;
     font-weight: 600;
     color: #fff;
     border: none;
@@ -383,7 +428,7 @@ body {
 
 .footer {
     margin-block-start: 100px;
-    block-size: 320px;
+    block-size: 260px;
     display: flex;
     flex-direction: row;
     align-items: end;
@@ -402,21 +447,11 @@ body {
     margin-inline-start: 83px;
 }
 
-
-.marketplace__container {
-    margin-inline-start: 130px;
-}
-
-.earn__container {
-    margin-inline: 60px;
-}
-
-
 .footer__container {
     display: flex;
     flex-direction: column;
-    align-self: self-start;
-    margin-block-start: 30px;
+    align-self: self-end;
+    margin-inline-start: 500px;
     gap: 5px;
 }
 
