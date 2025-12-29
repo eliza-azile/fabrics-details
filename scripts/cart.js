@@ -11,9 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция для скрытия/показа заголовка
     function toggleCartTitleVisibility() {
         const cartItems = document.querySelectorAll('.cart-item');
+        const cartSummary = document.querySelector('.cart-summary');
+        const decorateTitle = document.querySelector('.decorate_title');
 
         if (cartTitle) {
             cartTitle.style.display = cartItems.length === 0 ? 'none' : 'block';
+        }
+
+        if (cartSummary) {
+            cartSummary.style.display = cartItems.length === 0 ? 'none' : 'block';
+        }
+
+        if (decorateTitle) {
+            decorateTitle.style.display = cartItems.length === 0 ? 'none' : 'block';
         }
     }
 
@@ -36,18 +46,26 @@ document.addEventListener('DOMContentLoaded', function () {
     function showCartContent() {
         const cartContent = document.querySelector('.cart-content');
         const cartEmpty = document.querySelector('.cart-empty');
+        const cartSummary = document.querySelector('.cart-summary');
+        const decorateTitle = document.querySelector('.decorate_title');
 
         if (cartContent) cartContent.style.display = 'flex';
         if (cartEmpty) cartEmpty.style.display = 'none';
+        if (cartSummary) cartSummary.style.display = 'block';
+        if (decorateTitle) decorateTitle.style.display = 'block';
     }
 
     // Показать пустую корзину
     function showEmptyCart() {
         const cartContent = document.querySelector('.cart-content');
         const cartEmpty = document.querySelector('.cart-empty');
+        const cartSummary = document.querySelector('.cart-summary');
+        const decorateTitle = document.querySelector('.decorate_title');
 
         if (cartContent) cartContent.style.display = 'none';
         if (cartEmpty) cartEmpty.style.display = 'flex';
+        if (cartSummary) cartSummary.style.display = 'none';
+        if (decorateTitle) decorateTitle.style.display = 'none';
     }
 
     // Отрисовка товаров
@@ -92,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="cart-item__price">
                 <div class="price-current">${formatPrice(item.price * item.quantity)} ₽</div>
-                <div class="price-per-item">${formatPrice(item.price)} ₽/шт</div>
             </div>
         `;
 

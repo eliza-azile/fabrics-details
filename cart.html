@@ -44,59 +44,24 @@
     </header>
 
     <main class="main cart-main">
-        <div class="cart-container empty">
+        <div class="decorate_title">
             <h1 class="cart-title">Корзина</h1>
-
+        </div>
+        <div class="cart-container empty">
             <!-- Контент корзины (появляется когда есть товары) -->
             <div class="cart-content">
-                <!-- Левая колонка: товары -->
+                <!-- Колонка: товары -->
                 <div class="cart-items">
                     <!-- Товары будут добавляться динамически -->
                 </div>
+            </div>
 
-                <!-- Правая колонка: итого -->
-                <div class="cart-summary">
-                    <div class="summary-card">
-                        <h2 class="summary-title">Ваш заказ</h2>
+            <!-- Правая колонка -->
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <button class="checkout-btn">Перейти к оформлению</button>
 
-                        <div class="summary-row">
-                            <span class="items-count">Товары (0)</span>
-                            <span class="items-total">0 ₽</span>
-                        </div>
-
-                        <div class="summary-row">
-                            <span>Доставка</span>
-                            <span class="delivery-free">Бесплатно</span>
-                        </div>
-
-                        <div class="summary-row total">
-                            <span>Итого</span>
-                            <span class="total-price">0 ₽</span>
-                        </div>
-
-                        <button class="checkout-btn">Перейти к оформлению</button>
-
-                        <div class="payment-methods">
-                            <p class="payment-title">Способы оплаты</p>
-                            <div class="payment-icons">
-                                <img src="/images/visa.svg" alt="Visa">
-                                <img src="/images/mastercard.svg" alt="MasterCard">
-                                <img src="/images/mir.svg" alt="Мир">
-                            </div>
-                        </div>
-
-                        <div class="promo-section">
-                            <input type="text" class="promo-input" placeholder="Промокод">
-                            <button class="promo-btn">Применить</button>
-                        </div>
-                    </div>
-
-                    <div class="delivery-info">
-                        <h3 class="delivery-title">Доставка</h3>
-                        <p class="delivery-text">
-                            Бесплатная доставка при заказе от 2 500 ₽.
-                            Среднее время доставки: 2-4 дня.
-                        </p>
+                    <div class="payment-methods">
                     </div>
                 </div>
             </div>
